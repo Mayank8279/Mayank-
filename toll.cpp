@@ -1,3 +1,4 @@
+  
 #include<iostream>
 using namespace std;
 
@@ -5,13 +6,11 @@ class toll
 {
 unsigned int car_total;
 double amount;
-int paying;
-int non_paying;
 public:
-void menu(void);
-void paying(void);
-void non_paying(void);
-void display(void);
+void initial();
+void paying();
+void non_paying();
+void display();
 
 };
 
@@ -34,18 +33,18 @@ car_total++;
 
 void toll :: display()
 {
-cout<<"Cars Total: "<<car_total;
-cout<<"Cash Total: "<<amount;
+cout<<"Cars Total: "<<car_total<<endl;
+cout<<"Cash Total: "<<amount<<endl;
 }
 
 int main()
 {
 toll a;
 int x,y;
+int initial();
+do{
 cout<<"Enter 1 for paying cars OR , for non-paying cars OR 3 for display: ";
 cin>>x;
-void initial(void);
-do{
 switch(x)
 {
 case 1:
@@ -63,18 +62,10 @@ case 3:
 a.display();
 break;
 }
-default;
+default:
 {
-cout<<"Enter the correct choice"<<endl;
+cout<<"Invalid choice"<<endl;
 }
 }
-cout<<"DO you wish to continue(Y for yes/ N for no): ";
-cin>>y;
-}while(y=='Y');
-a.initial();
-a.paying();
-a.non_paying();
-a.display();
+}while(x!=3);
 }
-
-
